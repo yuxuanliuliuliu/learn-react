@@ -1,4 +1,4 @@
-function Avatar({person, size}) {
+function Avatar({person, size=100}) {
   return (
     <img
       className="avatar"
@@ -15,13 +15,12 @@ export default function Profile() {
     <div>
         <Avatar
             person={{ name: 'Woon sen', imageId: 'OKS67lh'}}
-            size={250} />
+            size={200} />
         <Avatar
             person={{ name: 'Ron Ayah', imageId: 'YfeOqp2'}}
             size={150} />
         <Avatar
-            person={{ name: 'Pani Dom', imageId: '1bX5QH6'}}
-            size={100} />
+            person={{ name: 'Pani Dom', imageId: '1bX5QH6'}} />
     </div>
   );
 }

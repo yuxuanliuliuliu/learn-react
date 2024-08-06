@@ -14,7 +14,7 @@ export default function TodoList() {
     <div style={person.theme}>
       <h1>Person Name's Todos</h1>
       <img className="avatar"
-      src="URL"
+      src="baseURL + imageID + imageSize + .jpg"
       alt="Person's Name"
       />
     </div>
