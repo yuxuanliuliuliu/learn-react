@@ -1,8 +1,17 @@
-function Item({ name, isPacked }) {
-  if (isPacked) {
-    return <li className="item">{name} ✔</li>;
-  }
-  return <li className="item"> {name} </li>
+import { ItemProps } from "@/types/item";
+
+function Item({ name, isPacked } : ItemProps) {
+  return (
+    <li className="item">
+      {isPacked ? (
+          name
+        ) : (
+          <del>
+            {name}
+          </del>
+        )}
+    </li>
+  );
 }
 
 export default function PackingList() {
@@ -11,7 +20,7 @@ export default function PackingList() {
       <h1>My Packing List</h1>
       <ul>
         <Item
-          isPacked={false}
+          isPacked={true}
           name="Laptop"
         />
         <Item
@@ -19,7 +28,7 @@ export default function PackingList() {
           name="Chargers"
         />
         <Item
-          isPacked={true}
+          isPacked={false}
           name="Socks"
         />
       </ul>

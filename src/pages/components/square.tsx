@@ -1,5 +1,5 @@
 import styles from '@/styles/Home.module.css';
-function Square({children}) {
+function Square({children}: {children: React.ReactNode}) {
   return (
     <div className={styles.square}>
       {children}
@@ -20,7 +20,7 @@ export default function Holder() {
         />
       </Square>
       <Square>
-        <label for="image"> 
+        <label htmlFor="image"> 
           <b> Katsuko Saruhashi  </b>
         </label>
       </Square>

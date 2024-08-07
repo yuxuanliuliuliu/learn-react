@@ -1,4 +1,6 @@
-function Item({ name, isPacked }) {
+import { ItemProps } from "@/types/item";
+
+function Item({ name, isPacked } : ItemProps) {
   return (
     <li className="item">
       {isPacked ? (

@@ -1,4 +1,6 @@
-function Profile({scientist, size=100}) {
+import { GalleryProps } from "@/types/gallery";
+
+function Profile({scientist, size=100}: GalleryProps) {
   return (
     <section className="profile">
       <h2>{scientist.name}</h2>
