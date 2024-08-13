@@ -14,14 +14,14 @@ export default function Scoreboard() {
     });
   }
 
-  function handleFirstNameChange(e) {
+  function handleFirstNameChange(e: { target: { value: string; }; }) {
     setPlayer({
       ...player,
       firstName: e.target.value,
     });
   }
 
-  function handleLastNameChange(e) {
+  function handleLastNameChange(e: { target: { value: string; }; }) {
     setPlayer({
       ...player,
       lastName: e.target.value

@@ -2,10 +2,10 @@
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
-import List from './solncomps/recipes'
+import Page from './components/context/show';
 
 export default function Home() {
   return (
-    <List />
+    <Page />
   )
 }

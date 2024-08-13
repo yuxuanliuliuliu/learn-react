@@ -1,11 +1,7 @@
-import Heading from './heading.js';
-import Section from './section.js';
+import Heading from './heading';
+import Section from './section';
 
-interface PageProps {
-  className?: string; // Add className prop here
-}
-
-export default function Page( { className }: PageProps ) {
+export default function Page() {
   return (
     <Section>
       <Heading>Title</Heading>

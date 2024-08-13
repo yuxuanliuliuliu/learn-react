@@ -9,7 +9,7 @@ export default function CounterList() {
     initialCounters
   );
 
-  function handleIncrementClick(index) {
+  function handleIncrementClick(index: number) {
     const nextCounters = counters.map((c, i) => {
       if (i === index) {
         // Increment the clicked counter
