@@ -2,10 +2,10 @@
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
-import Square from './components/square'
+import PackedItems from './solncomps/props_item'
 
 export default function Home() {
   return (
-    <Square />
+    <PackedItems />
   )
 }
