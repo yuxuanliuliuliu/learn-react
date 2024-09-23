@@ -1,4 +1,15 @@
 import { GalleryProps } from "@/types/gallery";
+import { ListItemProps } from "@/types/listItem";
+
+function ListItem({ label, content }: ListItemProps) {
+  return (
+    <li>
+      <b>{label}</b>
+      {content}
+    </li>
+  );
+}
+
 
 function Profile({scientist, size=100}: GalleryProps) {
   return (
@@ -12,18 +23,9 @@ function Profile({scientist, size=100}: GalleryProps) {
         height={size}
       />
       <ul>
-        <li>
-          <b>Profession: </b>
-          {scientist.profession}
-        </li>
-        <li>
-          <b>Awards: {scientist.awards.split(',').length} </b>
-          {scientist.awards}
-        </li>
-        <li>
-          <b>Discovered: </b>
-          {scientist.discovery}
-        </li>
+        <ListItem label="Profession: " content={scientist.profession} />
+        <ListItem label={`Awards: ${scientist.awards.split(',').length} `} content={scientist.awards} />
+        <ListItem label="Discovered: " content={scientist.discovery} />
       </ul>
     </section>
   )
