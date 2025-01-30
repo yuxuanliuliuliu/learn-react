@@ -15,23 +15,19 @@ export default function BucketList() {
   );
 
   function handleToggleMyList(artworkId: number, nextSeen: boolean) {
-    const tmpList = myList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
-    });
-    setMyList(tmpList);
+    setMyList(prevList =>
+      prevList.map(artwork =>
+        artwork.id === artworkId ? { ...artwork, seen: nextSeen } : artwork
+      )
+    );
   }
 
   function handleToggleYourList(artworkId: number, nextSeen: boolean) {
-    const tmpList = yourList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
-    });
-    setYourList(tmpList);
+    setYourList(prevList =>
+      prevList.map(artwork =>
+        artwork.id === artworkId ? { ...artwork, seen: nextSeen } : artwork
+      )
+    );
   }
 
   return (
